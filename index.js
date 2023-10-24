@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const Message = require('./models/messages');
+const timeHeader = require('./middleware/time-header');
 
 app.use(express.json());
+app.use('/', timeHeader);
 
 app.get('/', async (req, res) => {
     const messages = await Message.find();
