@@ -20,7 +20,7 @@ app.listen(3000, () => {
     console.log('Listening on port 3000...');
 });
 
-const dbPath = 'mongodb://localhost:27017/mesailor';
+const dbPath = 'mongodb://193.233.232.74:27017/mesailor';
 async function connectToDb() {
     try {
         await mongoose.connect(dbPath);
